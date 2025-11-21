@@ -1,5 +1,69 @@
 [
   {
+    "title": "Canon EOS 80D Camera",
+    "description": "Lens: Canon EFS 18-135mm - Great camera, some 8 years old or so. Works perfectly, comes with 2 batteries, charger, strap, bag.",
+    "room": "Office",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/camera.jpg"
+  },
+  {
+    "title": "Sideboard with drawers",
+    "description": "white ikea sideboard, with these soft box drawer thingies",
+    "room": "Bedroom",
+    "category": "Furniture",
+    "status": "available",
+    "image": "images/side board with drawers.jpg"
+  },
+  {
+    "title": "Desk Lamp",
+    "description": "or bedside lamp, black with adjustable arm",
+    "room": "Office",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/lamp.jpg"
+  },
+  {
+    "title": "Amazon Echo Pop",
+    "description": "",
+    "room": "Living room",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/echo.jpg"
+  },
+  {
+    "title": "Fake Plant",
+    "description": "perfect for bathroom I guess",
+    "room": "Bathroom",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/fake plant.jpg"
+  },
+  {
+    "title": "Bear Toy",
+    "description": "bit weird, ngl, it breathes and plays music when pressed",
+    "room": "Kids' room",
+    "category": "Misc",
+    "status": "available",
+    "image": "images/bear toy.jpg"
+  },
+  {
+    "title": "Decorative Robot",
+    "description": "",
+    "room": "Misc",
+    "category": "Decor",
+    "status": "available",
+    "image": "images/robot.jpg"
+  },
+  {
+    "title": "Electric Fan",
+    "description": "simple cheap fan from amazon",
+    "room": "Bedroom",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/fan.jpg"
+  },
+  {
     "title": "27 inch curved Samsung Monitor",
     "description": "a couple years old, works very well though",
     "room": "Office",
@@ -12,7 +76,8 @@
     "description": "black, single monitor arm, a bit scuffed from the years",
     "room": "Office",
     "category": "Electronics",
-    "status": "available"
+    "status": "available",
+    "image": "images/monitor arm.jpg"
   },
   {
     "title": "Dual monitor arm / mount",
@@ -75,7 +140,8 @@
     "description": "",
     "room": "Living room",
     "category": "Furniture",
-    "status": "available"
+    "status": "available",
+    "image": "images/large ikea drawers.jpg"
   },
   {
     "title": "PS4 w/ 3 controllers",
