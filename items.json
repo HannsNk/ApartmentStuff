@@ -1,7 +1,7 @@
 [
   {
-    "title": "27 inch Samsung Monitor",
-    "description": "",
+    "title": "27 inch curved Samsung Monitor",
+    "description": "a couple years old, works very well though",
     "room": "Office",
     "category": "Electronics",
     "status": "available",
@@ -9,23 +9,22 @@
   },
   {
     "title": "Monitor arm / mount",
-    "description": "",
+    "description": "black, single monitor arm, a bit scuffed from the years",
     "room": "Office",
     "category": "Accessories",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Dual monitor arm / mount",
-    "description": "",
+    "description": "pretty new, supports two monitors in different orientations",
     "room": "Office",
     "category": "Accessories",
     "status": "available",
-    "image": "images/dual monitor.jpg"
+    "image": "images/dual monitor arm.jpg"
   },
   {
     "title": "2020 MacBook Air",
-    "description": "",
+    "description": "weakest/cheapest model from the time, needs a factory reset I reckon",
     "room": "Office",
     "category": "Electronics",
     "status": "available",
@@ -33,7 +32,7 @@
   },
   {
     "title": "A bunch of candles",
-    "description": "",
+    "description": "yeah just random candles",
     "room": "Living room",
     "category": "Decor",
     "status": "available",
@@ -44,68 +43,53 @@
     "description": "",
     "room": "Living room",
     "category": "Furniture",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "1x large IKEA drawer",
     "description": "",
     "room": "Living room",
     "category": "Furniture",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "PS4 w/ 3 controllers",
-    "description": "",
+    "description": "some controllers a little scuffed but most of it works just fine",
     "room": "Living room",
     "category": "Electronics",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Books",
     "description": "A selection of books",
     "room": "Living room",
     "category": "Books",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
-    "title": "Samsung TV",
-    "description": "",
+    "title": "Samsung 2024 QN85D Neo QLED 4k HDR Smart TV",
+    "description": "55 inch model, works perfectly. With wall mount, two remotes, cables, stand. Awesome TV.",
     "room": "Living room",
     "category": "Electronics",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Farmhouse dining table",
     "description": "",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "available",
-    "image": "images/placeholder.jpg"
-  },
-  {
-    "title": "Speaker system (Kenwood amp, 4 speakers, subwoofer, long cables)",
-    "description": "Kenwood amp with 4 speakers, subwoofer and long speaker cables.",
-    "room": "Dining room",
-    "category": "Electronics",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Bar cart",
-    "description": "",
+    "description": "One of those random, cheap IKEA or Amazon bar carts",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Workout bench",
-    "description": "",
+    "description": "foldable workout bench, multiple angles",
     "room": "Misc",
     "category": "Fitness",
     "status": "available",
@@ -113,7 +97,7 @@
   },
   {
     "title": "Some weights",
-    "description": "",
+    "description": "ngl, they're kinda shitty",
     "room": "Misc",
     "category": "Fitness",
     "status": "available",
@@ -121,31 +105,28 @@
   },
   {
     "title": "Yoga mat",
-    "description": "",
+    "description": "black yoga mat",
     "room": "Misc",
     "category": "Fitness",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Yoga rollers (small & large)",
     "description": "Small and large yoga roller things.",
     "room": "Misc",
     "category": "Fitness",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Coat hangers / plant stands",
     "description": "",
     "room": "Misc",
     "category": "Misc",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Peace lily in white pot",
-    "description": "",
+    "description": "not loving life currently, but with some care could thrive again",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
@@ -153,7 +134,7 @@
   },
   {
     "title": "Wild banana (large)",
-    "description": "",
+    "description": "probably needs repotting",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
@@ -161,15 +142,14 @@
   },
   {
     "title": "String of hearts (tiny)",
-    "description": "",
+    "description": "cute little pot, not sure what this is supposed to look like tbh",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Dwarf umbrella tree",
-    "description": "",
+    "description": "in a glass pot, roots exposed",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
@@ -177,7 +157,7 @@
   },
   {
     "title": "Poinsettia",
-    "description": "",
+    "description": "turns red in fall/winter season, called Christmas flower sometimes",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
@@ -185,7 +165,7 @@
   },
   {
     "title": "Devil's ivy in beautiful pot",
-    "description": "",
+    "description": "what can I say, it's a devil's ivy and it's sexy af",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
@@ -193,7 +173,7 @@
   },
   {
     "title": "Large monstera in large pot",
-    "description": "",
+    "description": "big and bulky, fat girl",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
@@ -201,15 +181,14 @@
   },
   {
     "title": "Large monstera in small pot (needs repotting)",
-    "description": "Needs repotting",
+    "description": "Needs repotting, in rough shape",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Small monstera in medium pot",
-    "description": "",
+    "description": "my OG monstera, could do with another pot and nice soil",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
@@ -217,47 +196,44 @@
   },
   {
     "title": "Parlour palm",
-    "description": "",
+    "description": "it's a palm",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
-    "image": "images/parlour parlm.jpg"
+    "image": "images/parlour palm.jpg"
   },
   {
     "title": "Parlour palm 2",
-    "description": "",
+    "description": "it's another palm",
     "room": "Plants",
     "category": "Plants",
     "status": "available",
-    "image": "images/parlour parlm 2.jpg"
+    "image": "images/parlour palm 2.jpg"
   },
   {
     "title": "BBQ",
-    "description": "",
+    "description": "Cosmogrill, some rust here and there, obviously used. from amazon: https://www.amazon.co.uk/dp/B0749Q79YL?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_3&th=1",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Garden table",
-    "description": "",
+    "description": "wood, foldable garden table",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "2x garden / balcony chairs",
-    "description": "",
+    "description": "2 wooden foldable chairs",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "available",
-    "image": "images/placeholder.jpg"
+    "status": "available"
   },
   {
     "title": "Red Pan",
-    "description": "",
+    "description": "it's a pan. is red.",
     "room": "Kitchen",
     "category": "Kitchenware",
     "status": "available",
@@ -265,7 +241,7 @@
   },
   {
     "title": "Sauce Pan with Lid",
-    "description": "",
+    "description": "it's a pan. it's got a lid.",
     "room": "Kitchen",
     "category": "Kitchenware",
     "status": "available",
@@ -281,7 +257,7 @@
   },
   {
     "title": "Rice cooker",
-    "description": "",
+    "description": "single setting rice cooker, works like a charm",
     "room": "Kitchen",
     "category": "Kitchenware",
     "status": "available",
@@ -289,7 +265,7 @@
   },
   {
     "title": "Crock pot",
-    "description": "",
+    "description": "relatively small, works well though",
     "room": "Kitchen",
     "category": "Kitchenware",
     "status": "available",
@@ -297,26 +273,10 @@
   },
   {
     "title": "Wine rack",
-    "description": "",
+    "description": "found on the street, has holes",
     "room": "Kitchen",
     "category": "Kitchenware",
     "status": "available",
     "image": "images/wine rack.jpg"
-  },
-  {
-    "title": "Toaster",
-    "description": "",
-    "room": "Kitchen",
-    "category": "Kitchenware",
-    "status": "available",
-    "image": "images/placeholder.jpg"
-  },
-  {
-    "title": "Cheap bed frame",
-    "description": "",
-    "room": "Bedroom",
-    "category": "Furniture",
-    "status": "available",
-    "image": "images/placeholder.jpg"
   }
 ]
