@@ -37,6 +37,24 @@
     </div>
   </main>
 
-  
+  <!-- Modal preview (hidden by default) -->
+  <div id="modal" class="modal" aria-hidden="true" style="display:none;">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <div class="modal-content">
+        <div class="modal-image-wrapper">
+          <img id="modal-image" src="" alt="" />
+        </div>
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <div id="modal-meta" class="card-meta"></div>
+          <div id="modal-notes" class="card-notes"></div>
+          <div id="modal-status" class="status-badge"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

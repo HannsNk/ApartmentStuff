@@ -7,6 +7,15 @@ const searchInput = document.getElementById("search");
 const pills = Array.from(document.querySelectorAll(".pill"));
 const emptyState = document.getElementById("empty");
 const categorySelect = document.getElementById('category-filter');
+// Modal elements
+const modal = document.getElementById('modal');
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+const modalImage = document.getElementById('modal-image');
+const modalTitle = document.getElementById('modal-title');
+const modalMeta = document.getElementById('modal-meta');
+const modalNotes = document.getElementById('modal-notes');
+const modalStatus = document.getElementById('modal-status');
 
 let currentFilter = "all";
 let currentSearch = "";
@@ -71,6 +80,19 @@ function render() {
     return matchesStatus && matchesSearch && matchesCategory;
   });
 
+  // sort so taken items always appear at the end
+  const statusOrder = {
+    new: -1,
+    available: 0,
+    reserved: 1,
+    taken: 2
+  };
+  filtered.sort((a, b) => {
+    const sa = statusOrder[(a.status || '').toLowerCase()] ?? 0;
+    const sb = statusOrder[(b.status || '').toLowerCase()] ?? 0;
+    return sa - sb;
+  });
+
   if (!filtered.length) {
     emptyState.style.display = "block";
     return;
@@ -81,6 +103,8 @@ function render() {
   for (const item of filtered) {
     const card = document.createElement("article");
     card.className = "card";
+    // add status as class for styling (.reserved, .taken, etc.)
+    if (item.status) card.classList.add(String(item.status).toLowerCase());
 
     const imgWrapper = document.createElement("div");
     imgWrapper.className = "card-img-wrapper";
@@ -94,12 +118,8 @@ function render() {
 
     const badge = document.createElement("div");
     badge.className = "status-badge " + item.status;
-    badge.textContent =
-      item.status === "available"
-        ? "Available"
-        : item.status === "reserved"
-        ? "Reserved"
-        : "Taken";
+    const st = String(item.status || '').toLowerCase();
+    badge.textContent = st === 'available' ? 'Available' : st === 'reserved' ? 'Reserved' : st === 'new' ? 'New' : 'Taken';
     imgWrapper.appendChild(badge);
 
     const body = document.createElement("div");
@@ -126,8 +146,45 @@ function render() {
     card.appendChild(imgWrapper);
     card.appendChild(body);
     grid.appendChild(card);
+
+    // open modal when the card is clicked (only if not taken)
+    if (String(item.status || '').toLowerCase() !== 'taken') {
+      card.addEventListener('click', () => openModal(item));
+    }
   }
 }
+
+function openModal(item) {
+  if (!modal) return;
+  modalImage.src = item.image || 'images/placeholder.jpg';
+  modalImage.alt = item.title || '';
+  modalTitle.textContent = item.title || '';
+  modalMeta.textContent = [item.room, item.category].filter(Boolean).join(' · ');
+  modalNotes.textContent = item.description || '';
+
+  // set status badge class
+  const mst = String(item.status || 'available').toLowerCase();
+  modalStatus.className = 'status-badge ' + mst;
+  modalStatus.textContent = mst === 'available' ? 'Available' : mst === 'reserved' ? 'Reserved' : mst === 'new' ? 'New' : 'Taken';
+
+  modal.style.display = 'flex';
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeModal() {
+  if (!modal) return;
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+  // clear image to stop possible playback
+  modalImage.src = '';
+}
+
+// modal close handlers
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
 
 // Search + filter handlers
 searchInput.addEventListener("input", (e) => {

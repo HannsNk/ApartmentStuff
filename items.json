@@ -43,7 +43,32 @@
     "description": "",
     "room": "Living room",
     "category": "Furniture",
-    "status": "available"
+    "status": "available",
+    "image": "images/ikea drawers.jpg"
+  },
+  {
+    "title": "Dried flowers",
+    "description": "a couple more than in the image",
+    "room": "Misc",
+    "category": "Decor",
+    "status": "available",
+    "image": "images/dried flowers.jpg"
+  },
+  {
+    "title": "Large frame (without picture)",
+    "description": "the painting is mine :)",
+    "room": "Misc",
+    "category": "Decor",
+    "status": "available",
+    "image": "images/picture frame.jpg"
+  },
+  {
+    "title": "Brown glass vase",
+    "description": "",
+    "room": "Misc",
+    "category": "Decor",
+    "status": "available",
+    "image": "images/brown glass vase.jpg"
   },
   {
     "title": "1x large IKEA drawer",
@@ -57,35 +82,56 @@
     "description": "some controllers a little scuffed but most of it works just fine",
     "room": "Living room",
     "category": "Electronics",
-    "status": "available"
+    "status": "available",
+    "image": "images/ps4.jpg"
+  },
+  {
+    "title": "Smart Scale",
+    "description": "cheap bathroom smart scale with bluetooth",
+    "room": "Bathroom",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/smart scale.jpg"
+  },
+  {
+    "title": "Basket Boxes",
+    "description": "4 boxes made of wicker / basket material with hinged lids",
+    "room": "Bathroom",
+    "category": "Storage",
+    "status": "available",
+    "image": "images/baskets.jpg"
   },
   {
     "title": "Books",
     "description": "A selection of books",
     "room": "Living room",
     "category": "Books",
-    "status": "available"
+    "status": "available",
+    "image": "images/books.jpg"
   },
   {
     "title": "Samsung 2024 QN85D Neo QLED 4k HDR Smart TV",
     "description": "55 inch model, works perfectly. With wall mount, two remotes, cables, stand. Awesome TV.",
     "room": "Living room",
     "category": "Electronics",
-    "status": "available"
+    "status": "available",
+    "image": "images/samsung tc.jpg"
   },
   {
     "title": "Farmhouse dining table",
     "description": "",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "available"
+    "status": "available",
+    "image": "images/farmhouse table.jpg"
   },
   {
     "title": "Bar cart",
     "description": "One of those random, cheap IKEA or Amazon bar carts",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "available"
+    "status": "available",
+    "image": "images/bar cart.jpg"
   },
   {
     "title": "Workout bench",
@@ -121,8 +167,17 @@
     "title": "Coat hangers / plant stands",
     "description": "",
     "room": "Misc",
-    "category": "Misc",
-    "status": "available"
+    "category": "Furniture",
+    "status": "available",
+    "image": "images/hanger.jpg"
+  },
+  {
+    "title": "Bass/Guitar Amplifier",
+    "description": "small but powerful, good for a London flat",
+    "room": "Misc",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/bass amp.jpg"
   },
   {
     "title": "Peace lily in white pot",
@@ -215,14 +270,16 @@
     "description": "Cosmogrill, some rust here and there, obviously used. from amazon: https://www.amazon.co.uk/dp/B0749Q79YL?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_3&th=1",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "available"
+    "status": "available",
+    "image": "images/grill.png"
   },
   {
     "title": "Garden table",
     "description": "wood, foldable garden table",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "available"
+    "status": "available",
+    "image": "images/garden table.jpg"
   },
   {
     "title": "2x garden / balcony chairs",
