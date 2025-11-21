@@ -83,6 +83,33 @@ main {
   gap: 1rem;
 }
 
+/* Category heading spans full width of the grid */
+.category-heading {
+  grid-column: 1 / -1;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  color: #111827;
+  background: transparent;
+}
+
+/* Section headings like 'Reserved' or 'Taken' */
+.section-heading {
+  grid-column: 1 / -1;
+  font-weight: 800;
+  padding: 0.5rem 0.5rem;
+  color: #374151;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 0.5rem;
+}
+
+/* Category subheading inside a section */
+.category-subheading {
+  grid-column: 1 / -1;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem 0.15rem;
+  color: #111827;
+}
+
 .card {
   background: white;
   border-radius: 1rem;

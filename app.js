@@ -80,30 +80,16 @@ function render() {
     return matchesStatus && matchesSearch && matchesCategory;
   });
 
-  // sort so taken items always appear at the end
-  const statusOrder = {
-    new: -1,
-    available: 0,
-    reserved: 1,
-    taken: 2
-  };
-  filtered.sort((a, b) => {
-    const sa = statusOrder[(a.status || '').toLowerCase()] ?? 0;
-    const sb = statusOrder[(b.status || '').toLowerCase()] ?? 0;
-    return sa - sb;
-  });
+  // We'll render in this order: new items (front), available items grouped by category, reserved items, taken items (end)
+  const newItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'new');
+  const availableItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'available');
+  const reservedItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'reserved');
+  const takenItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'taken');
 
-  if (!filtered.length) {
-    emptyState.style.display = "block";
-    return;
-  } else {
-    emptyState.style.display = "none";
-  }
-
-  for (const item of filtered) {
+  // Helper to create a card element for an item
+  function createCard(item) {
     const card = document.createElement("article");
     card.className = "card";
-    // add status as class for styling (.reserved, .taken, etc.)
     if (item.status) card.classList.add(String(item.status).toLowerCase());
 
     const imgWrapper = document.createElement("div");
@@ -145,11 +131,83 @@ function render() {
 
     card.appendChild(imgWrapper);
     card.appendChild(body);
-    grid.appendChild(card);
 
-    // open modal when the card is clicked (only if not taken)
+    // attach click handler unless taken
     if (String(item.status || '').toLowerCase() !== 'taken') {
       card.addEventListener('click', () => openModal(item));
+    }
+
+    return card;
+  }
+
+  // sort items within groups by title
+  const sortByTitle = (a, b) => (a.title || '').localeCompare(b.title || '');
+  newItems.sort(sortByTitle);
+  availableItems.sort(sortByTitle);
+  reservedItems.sort(sortByTitle);
+  takenItems.sort(sortByTitle);
+
+  if (!filtered.length) {
+    emptyState.style.display = "block";
+    return;
+  } else {
+    emptyState.style.display = "none";
+  }
+
+  // Render new items first
+  for (const item of newItems) {
+    const card = createCard(item);
+    card.classList.add('new');
+    grid.appendChild(card);
+  }
+
+  // Group available items by category and render with headings
+  if (availableItems.length) {
+    const map = new Map();
+    for (const it of availableItems) {
+      const cat = (it.category || 'Uncategorized');
+      if (!map.has(cat)) map.set(cat, []);
+      map.get(cat).push(it);
+    }
+    const cats = Array.from(map.keys()).sort((a, b) => a.localeCompare(b));
+    for (const cat of cats) {
+      const heading = document.createElement('div');
+      heading.className = 'category-heading';
+      heading.textContent = cat;
+      grid.appendChild(heading);
+      const list = map.get(cat).sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+      for (const it of list) {
+        const card = createCard(it);
+        grid.appendChild(card);
+      }
+    }
+  }
+
+  // Render reserved items (after available) — no category subheadings
+  if (reservedItems.length) {
+    const sectionHeading = document.createElement('div');
+    sectionHeading.className = 'section-heading';
+    sectionHeading.textContent = 'Reserved';
+    grid.appendChild(sectionHeading);
+
+    reservedItems.sort(sortByTitle);
+    for (const it of reservedItems) {
+      const card = createCard(it);
+      grid.appendChild(card);
+    }
+  }
+
+  // Render taken items at the end under a 'Taken' section — no category subheadings
+  if (takenItems.length) {
+    const sectionHeading = document.createElement('div');
+    sectionHeading.className = 'section-heading';
+    sectionHeading.textContent = 'Taken';
+    grid.appendChild(sectionHeading);
+
+    takenItems.sort(sortByTitle);
+    for (const it of takenItems) {
+      const card = createCard(it);
+      grid.appendChild(card);
     }
   }
 }

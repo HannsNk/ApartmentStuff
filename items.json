@@ -11,14 +11,14 @@
     "title": "Monitor arm / mount",
     "description": "black, single monitor arm, a bit scuffed from the years",
     "room": "Office",
-    "category": "Accessories",
+    "category": "Electronics",
     "status": "available"
   },
   {
     "title": "Dual monitor arm / mount",
     "description": "pretty new, supports two monitors in different orientations",
     "room": "Office",
-    "category": "Accessories",
+    "category": "Electronics",
     "status": "available",
     "image": "images/dual monitor arm.jpg"
   },
@@ -105,7 +105,7 @@
     "title": "Books",
     "description": "A selection of books",
     "room": "Living room",
-    "category": "Books",
+    "category": "Misc",
     "status": "available",
     "image": "images/books.jpg"
   },
@@ -114,7 +114,7 @@
     "description": "55 inch model, works perfectly. With wall mount, two remotes, cables, stand. Awesome TV.",
     "room": "Living room",
     "category": "Electronics",
-    "status": "available",
+    "status": "reserved",
     "image": "images/samsung tc.jpg"
   },
   {
@@ -122,7 +122,7 @@
     "description": "",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "available",
+    "status": "reserved",
     "image": "images/farmhouse table.jpg"
   },
   {
@@ -130,7 +130,7 @@
     "description": "One of those random, cheap IKEA or Amazon bar carts",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "available",
+    "status": "taken",
     "image": "images/bar cart.jpg"
   },
   {
@@ -138,7 +138,7 @@
     "description": "foldable workout bench, multiple angles",
     "room": "Misc",
     "category": "Fitness",
-    "status": "available",
+    "status": "taken",
     "image": "images/workout bench.jpg"
   },
   {
