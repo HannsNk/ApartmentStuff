@@ -180,7 +180,7 @@
     "description": "55 inch model, works perfectly. With wall mount, two remotes, cables, stand. Awesome TV.",
     "room": "Living room",
     "category": "Electronics",
-    "status": "reserved",
+    "status": "available",
     "image": "images/samsung tc.jpg"
   },
   {
@@ -188,7 +188,7 @@
     "description": "",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "reserved",
+    "status": "available",
     "image": "images/farmhouse table.jpg"
   },
   {
@@ -196,7 +196,7 @@
     "description": "One of those random, cheap IKEA or Amazon bar carts",
     "room": "Dining room",
     "category": "Furniture",
-    "status": "taken",
+    "status": "available",
     "image": "images/bar cart.jpg"
   },
   {
@@ -204,7 +204,7 @@
     "description": "foldable workout bench, multiple angles",
     "room": "Misc",
     "category": "Fitness",
-    "status": "taken",
+    "status": "available",
     "image": "images/workout bench.jpg"
   },
   {
