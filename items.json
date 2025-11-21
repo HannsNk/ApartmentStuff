@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Example: IKEA dining chair",
+    "description": "White wooden chair, a few scuffs but sturdy.",
+    "room": "Living room",
+    "category": "Furniture",
+    "status": "available",
+    "image": "images/dining chair.jpg"
+  },
+  {
+    "title": "Example: Set of 4 wine glasses",
+    "description": "IKEA style, no chips.",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "available",
+    "image": "images/wine glasses.webp"
+  },
+  {
+    "title": "Example: Desk lamp",
+    "description": "Black lamp with warm light bulb.",
+    "room": "Bedroom",
+    "category": "Lighting",
+    "status": "available",
+    "image": "images/desk lamp.avif"
+  }
+]

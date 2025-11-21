@@ -4,165 +4,8 @@
   <meta charset="UTF-8" />
   <title>Stuff From My Flat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.4;
-    }
-
-    body {
-      margin: 0;
-      background: #f5f5f7;
-      color: #111827;
-    }
-
-    header {
-      padding: 1.5rem 1rem 0.5rem;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      margin: 0 0 0.5rem;
-      font-size: 1.8rem;
-    }
-
-    .subtitle {
-      margin: 0 0 1rem;
-      color: #4b5563;
-      font-size: 0.95rem;
-    }
-
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .search-input {
-      flex: 1 1 220px;
-      padding: 0.6rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid #d1d5db;
-      font-size: 0.95rem;
-      outline: none;
-    }
-
-    .search-input:focus {
-      border-color: #111827;
-    }
-
-    .pill {
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid #d1d5db;
-      background: white;
-      font-size: 0.85rem;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .pill.active {
-      background: #111827;
-      color: white;
-      border-color: #111827;
-    }
-
-    main {
-      max-width: 960px;
-      margin: 0 auto 3rem;
-      padding: 0 1rem 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-      display: flex;
-      flex-direction: column;
-      border: 1px solid #e5e7eb;
-    }
-
-    .card-img-wrapper {
-      position: relative;
-      padding-top: 65%;
-      overflow: hidden;
-      background: #e5e7eb;
-    }
-
-    .card-img-wrapper img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .status-badge {
-      position: absolute;
-      top: 0.6rem;
-      right: 0.6rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      background: rgba(17,24,39,0.85);
-      color: #f9fafb;
-    }
-
-    .status-badge.taken {
-      background: rgba(55,65,81,0.85);
-    }
-
-    .status-badge.reserved {
-      background: #f59e0b;
-    }
-
-    .card-body {
-      padding: 0.8rem 0.9rem 0.9rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      font-size: 0.9rem;
-    }
-
-    .card-title {
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .card-meta {
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-
-    .card-notes {
-      font-size: 0.85rem;
-      color: #4b5563;
-    }
-
-    .empty-state {
-      text-align: center;
-      margin-top: 3rem;
-      color: #6b7280;
-      font-size: 0.95rem;
-    }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header>
@@ -201,23 +44,23 @@
         room: "Living room",
         category: "Furniture",
         status: "available", // "available" | "reserved" | "taken"
-        image: "images/chair-example.jpg"
+        image: "images/dining chair.jpg"
       },
       {
         title: "Example: Set of 4 wine glasses",
         description: "IKEA style, no chips.",
         room: "Kitchen",
         category: "Kitchenware",
-        status: "reserved",
-        image: "images/glasses-example.jpg"
+        status: "available",
+        image: "images/wine glasses.webp"
       },
       {
         title: "Example: Desk lamp",
         description: "Black lamp with warm light bulb.",
         room: "Bedroom",
         category: "Lighting",
-        status: "taken",
-        image: "images/lamp-example.jpg"
+        status: "available",
+        image: "images/desk lamp.avif"
       }
     ];
 
