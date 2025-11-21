@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stuff From My Flat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.4;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f7;
+      color: #111827;
+    }
+
+    header {
+      padding: 1.5rem 1rem 0.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.8rem;
+    }
+
+    .subtitle {
+      margin: 0 0 1rem;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .search-input {
+      flex: 1 1 220px;
+      padding: 0.6rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: #111827;
+    }
+
+    .pill {
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: white;
+      font-size: 0.85rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .pill.active {
+      background: #111827;
+      color: white;
+      border-color: #111827;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e5e7eb;
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      padding-top: 65%;
+      overflow: hidden;
+      background: #e5e7eb;
+    }
+
+    .card-img-wrapper img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.6rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(17,24,39,0.85);
+      color: #f9fafb;
+    }
+
+    .status-badge.taken {
+      background: rgba(55,65,81,0.85);
+    }
+
+    .status-badge.reserved {
+      background: #f59e0b;
+    }
+
+    .card-body {
+      padding: 0.8rem 0.9rem 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .card-notes {
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+
+    .empty-state {
+      text-align: center;
+      margin-top: 3rem;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stuff From My Flat</h1>
+    <p class="subtitle">
+      Moving out soon – friends get first pick 🧹  
+      Message me to claim something. I’ll mark things as taken once they’re gone.
+    </p>
+    <div class="toolbar">
+      <input
+        id="search"
+        class="search-input"
+        placeholder="Search by name, room, category..."
+      />
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="available">Available</button>
+      <button class="pill" data-filter="reserved">Reserved</button>
+      <button class="pill" data-filter="taken">Taken</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty-state" style="display:none;">
+      Nothing matches your search or filter. Try clearing the search box.
+    </div>
+  </main>
+
+  <script>
+    // 👉 Edit this list only. Add/remove items as needed.
+    // image: put files in an "images" folder and reference like "images/chair.jpg"
+    const items = [
+      {
+        title: "Example: IKEA dining chair",
+        description: "White wooden chair, a few scuffs but sturdy.",
+        room: "Living room",
+        category: "Furniture",
+        status: "available", // "available" | "reserved" | "taken"
+        image: "images/chair-example.jpg"
+      },
+      {
+        title: "Example: Set of 4 wine glasses",
+        description: "IKEA style, no chips.",
+        room: "Kitchen",
+        category: "Kitchenware",
+        status: "reserved",
+        image: "images/glasses-example.jpg"
+      },
+      {
+        title: "Example: Desk lamp",
+        description: "Black lamp with warm light bulb.",
+        room: "Bedroom",
+        category: "Lighting",
+        status: "taken",
+        image: "images/lamp-example.jpg"
+      }
+    ];
+
+    const grid = document.getElementById("grid");
+    const searchInput = document.getElementById("search");
+    const pills = Array.from(document.querySelectorAll(".pill"));
+    const emptyState = document.getElementById("empty");
+
+    let currentFilter = "all";
+    let currentSearch = "";
+
+    function render() {
+      grid.innerHTML = "";
+
+      const filtered = items.filter((item) => {
+        const matchesStatus =
+          currentFilter === "all" ? true : item.status === currentFilter;
+
+        const haystack = (
+          item.title +
+          " " +
+          (item.description || "") +
+          " " +
+          (item.room || "") +
+          " " +
+          (item.category || "")
+        ).toLowerCase();
+        const matchesSearch = haystack.includes(currentSearch.toLowerCase());
+
+        return matchesStatus && matchesSearch;
+      });
+
+      if (!filtered.length) {
+        emptyState.style.display = "block";
+        return;
+      } else {
+        emptyState.style.display = "none";
+      }
+
+      for (const item of filtered) {
+        const card = document.createElement("article");
+        card.className = "card";
+
+        const imgWrapper = document.createElement("div");
+        imgWrapper.className = "card-img-wrapper";
+
+        if (item.image) {
+          const img = document.createElement("img");
+          img.src = item.image;
+          img.alt = item.title;
+          imgWrapper.appendChild(img);
+        }
+
+        const badge = document.createElement("div");
+        badge.className = "status-badge " + item.status;
+        badge.textContent =
+          item.status === "available"
+            ? "Available"
+            : item.status === "reserved"
+            ? "Reserved"
+            : "Taken";
+        imgWrapper.appendChild(badge);
+
+        const body = document.createElement("div");
+        body.className = "card-body";
+
+        const title = document.createElement("div");
+        title.className = "card-title";
+        title.textContent = item.title;
+
+        const meta = document.createElement("div");
+        meta.className = "card-meta";
+        meta.textContent = [item.room, item.category]
+          .filter(Boolean)
+          .join(" · ");
+
+        const notes = document.createElement("div");
+        notes.className = "card-notes";
+        notes.textContent = item.description || "";
+
+        body.appendChild(title);
+        if (meta.textContent) body.appendChild(meta);
+        if (notes.textContent) body.appendChild(notes);
+
+        card.appendChild(imgWrapper);
+        card.appendChild(body);
+        grid.appendChild(card);
+      }
+    }
+
+    // Search + filter handlers
+    searchInput.addEventListener("input", (e) => {
+      currentSearch = e.target.value;
+      render();
+    });
+
+    pills.forEach((pill) => {
+      pill.addEventListener("click", () => {
+        pills.forEach((p) => p.classList.remove("active"));
+        pill.classList.add("active");
+        currentFilter = pill.getAttribute("data-filter");
+        render();
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>
