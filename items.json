@@ -1,26 +1,322 @@
 [
   {
-    "title": "Example: IKEA dining chair",
-    "description": "White wooden chair, a few scuffs but sturdy.",
+    "title": "27 inch Samsung Monitor",
+    "description": "",
+    "room": "Office",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/samsung monitor.jpg"
+  },
+  {
+    "title": "Monitor arm / mount",
+    "description": "",
+    "room": "Office",
+    "category": "Accessories",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Dual monitor arm / mount",
+    "description": "",
+    "room": "Office",
+    "category": "Accessories",
+    "status": "available",
+    "image": "images/dual monitor.jpg"
+  },
+  {
+    "title": "2020 MacBook Air",
+    "description": "",
+    "room": "Office",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/macbook.jpg"
+  },
+  {
+    "title": "A bunch of candles",
+    "description": "",
+    "room": "Living room",
+    "category": "Decor",
+    "status": "available",
+    "image": "images/candles.jpg"
+  },
+  {
+    "title": "2x IKEA drawers",
+    "description": "",
     "room": "Living room",
     "category": "Furniture",
     "status": "available",
-    "image": "images/dining chair.jpg"
+    "image": "images/placeholder.jpg"
   },
   {
-    "title": "Example: Set of 4 wine glasses",
-    "description": "IKEA style, no chips.",
+    "title": "1x large IKEA drawer",
+    "description": "",
+    "room": "Living room",
+    "category": "Furniture",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "PS4 w/ 3 controllers",
+    "description": "",
+    "room": "Living room",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Books",
+    "description": "A selection of books",
+    "room": "Living room",
+    "category": "Books",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Samsung TV",
+    "description": "",
+    "room": "Living room",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Farmhouse dining table",
+    "description": "",
+    "room": "Dining room",
+    "category": "Furniture",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Speaker system (Kenwood amp, 4 speakers, subwoofer, long cables)",
+    "description": "Kenwood amp with 4 speakers, subwoofer and long speaker cables.",
+    "room": "Dining room",
+    "category": "Electronics",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Bar cart",
+    "description": "",
+    "room": "Dining room",
+    "category": "Furniture",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Workout bench",
+    "description": "",
+    "room": "Misc",
+    "category": "Fitness",
+    "status": "available",
+    "image": "images/workout bench.jpg"
+  },
+  {
+    "title": "Some weights",
+    "description": "",
+    "room": "Misc",
+    "category": "Fitness",
+    "status": "available",
+    "image": "images/weights.jpg"
+  },
+  {
+    "title": "Yoga mat",
+    "description": "",
+    "room": "Misc",
+    "category": "Fitness",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Yoga rollers (small & large)",
+    "description": "Small and large yoga roller things.",
+    "room": "Misc",
+    "category": "Fitness",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Coat hangers / plant stands",
+    "description": "",
+    "room": "Misc",
+    "category": "Misc",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Peace lily in white pot",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/peace lily.jpg"
+  },
+  {
+    "title": "Wild banana (large)",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/banana.jpg"
+  },
+  {
+    "title": "String of hearts (tiny)",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Dwarf umbrella tree",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/umbrella tree.jpg"
+  },
+  {
+    "title": "Poinsettia",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/poinsettia.jpg"
+  },
+  {
+    "title": "Devil's ivy in beautiful pot",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/devils ivy.jpg"
+  },
+  {
+    "title": "Large monstera in large pot",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/large monstera large pot.jpg"
+  },
+  {
+    "title": "Large monstera in small pot (needs repotting)",
+    "description": "Needs repotting",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Small monstera in medium pot",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/small monstera.jpg"
+  },
+  {
+    "title": "Parlour palm",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/parlour parlm.jpg"
+  },
+  {
+    "title": "Parlour palm 2",
+    "description": "",
+    "room": "Plants",
+    "category": "Plants",
+    "status": "available",
+    "image": "images/parlour parlm 2.jpg"
+  },
+  {
+    "title": "BBQ",
+    "description": "",
+    "room": "Garden/balcony",
+    "category": "Outdoor",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Garden table",
+    "description": "",
+    "room": "Garden/balcony",
+    "category": "Outdoor",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "2x garden / balcony chairs",
+    "description": "",
+    "room": "Garden/balcony",
+    "category": "Outdoor",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Red Pan",
+    "description": "",
     "room": "Kitchen",
     "category": "Kitchenware",
     "status": "available",
-    "image": "images/wine glasses.webp"
+    "image": "images/red pan.jpg"
   },
   {
-    "title": "Example: Desk lamp",
-    "description": "Black lamp with warm light bulb.",
-    "room": "Bedroom",
-    "category": "Lighting",
+    "title": "Sauce Pan with Lid",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
     "status": "available",
-    "image": "images/desk lamp.avif"
+    "image": "images/saucepan with lid.jpg"
+  },
+  {
+    "title": "Old Pans",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "available",
+    "image": "images/old pans.jpg"
+  },
+  {
+    "title": "Rice cooker",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "available",
+    "image": "images/rice cooker.jpg"
+  },
+  {
+    "title": "Crock pot",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "available",
+    "image": "images/crockpot.jpg"
+  },
+  {
+    "title": "Wine rack",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "available",
+    "image": "images/wine rack.jpg"
+  },
+  {
+    "title": "Toaster",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "available",
+    "image": "images/placeholder.jpg"
+  },
+  {
+    "title": "Cheap bed frame",
+    "description": "",
+    "room": "Bedroom",
+    "category": "Furniture",
+    "status": "available",
+    "image": "images/placeholder.jpg"
   }
 ]

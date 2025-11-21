@@ -6,9 +6,44 @@ const grid = document.getElementById("grid");
 const searchInput = document.getElementById("search");
 const pills = Array.from(document.querySelectorAll(".pill"));
 const emptyState = document.getElementById("empty");
+const categorySelect = document.getElementById('category-filter');
 
 let currentFilter = "all";
 let currentSearch = "";
+let currentCategory = "all";
+
+function populateCategories() {
+  if (!categorySelect) return;
+  // collect unique categories (non-empty)
+  const set = new Set();
+  for (const it of items) {
+    if (it.category && String(it.category).trim()) {
+      set.add(String(it.category).trim());
+    }
+  }
+  const categories = Array.from(set).sort((a, b) => a.localeCompare(b));
+
+  // reset options
+  categorySelect.innerHTML = '';
+  const allOpt = document.createElement('option');
+  allOpt.value = 'all';
+  allOpt.textContent = 'All categories';
+  categorySelect.appendChild(allOpt);
+
+  for (const cat of categories) {
+    const opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = cat;
+    categorySelect.appendChild(opt);
+  }
+
+  // restore previous selection if possible
+  try {
+    categorySelect.value = currentCategory || 'all';
+  } catch (e) {
+    categorySelect.value = 'all';
+  }
+}
 
 function render() {
   grid.innerHTML = "";
@@ -16,6 +51,11 @@ function render() {
   const filtered = items.filter((item) => {
     const matchesStatus =
       currentFilter === "all" ? true : item.status === currentFilter;
+
+    const matchesCategory =
+      currentCategory === "all"
+        ? true
+        : (item.category || "").toLowerCase() === currentCategory.toLowerCase();
 
     const haystack = (
       item.title +
@@ -28,7 +68,7 @@ function render() {
     ).toLowerCase();
     const matchesSearch = haystack.includes(currentSearch.toLowerCase());
 
-    return matchesStatus && matchesSearch;
+    return matchesStatus && matchesSearch && matchesCategory;
   });
 
   if (!filtered.length) {
@@ -104,6 +144,14 @@ pills.forEach((pill) => {
   });
 });
 
+// Category select handler
+if (categorySelect) {
+  categorySelect.addEventListener('change', (e) => {
+    currentCategory = e.target.value || 'all';
+    render();
+  });
+}
+
 // Load items from items.json, then render.
 fetch('items.json')
   .then((res) => {
@@ -112,6 +160,8 @@ fetch('items.json')
   })
   .then((data) => {
     if (Array.isArray(data)) items = data;
+    // populate categories
+    populateCategories();
     render();
   })
   .catch((err) => {
