@@ -44,7 +44,7 @@
     "description": "",
     "room": "Living room",
     "category": "Electronics",
-    "status": "available",
+    "status": "reserved",
     "image": "images/echo.jpg"
   },
   {
@@ -403,7 +403,7 @@
     "description": "single setting rice cooker, works like a charm",
     "room": "Kitchen",
     "category": "Kitchenware",
-    "status": "available",
+    "status": "reserved",
     "image": "images/rice cooker.jpg"
   },
   {
@@ -411,7 +411,7 @@
     "description": "relatively small, works well though",
     "room": "Kitchen",
     "category": "Kitchenware",
-    "status": "available",
+    "status": "reserved",
     "image": "images/crockpot.jpg"
   },
   {
