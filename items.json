@@ -12,7 +12,7 @@
     "description": "What am I gonna say? It's a picture with a frame. Look at the picture. Painted by a guy in Camden.",
     "room": "Living Room",
     "category": "Decor",
-    "status": "available",
+    "status": "reserved",
     "image": "images/picture w frame.jpg"
   },
   {
@@ -148,7 +148,7 @@
     "description": "",
     "room": "Misc",
     "category": "Decor",
-    "status": "available",
+    "status": "reserved",
     "image": "images/brown glass vase.jpg"
   },
   {
@@ -308,7 +308,7 @@
     "description": "what can I say, it's a devil's ivy and it's sexy af",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "reserved",
     "image": "images/devils ivy.jpg"
   },
   {
@@ -332,7 +332,7 @@
     "description": "my OG monstera, could do with another pot and nice soil",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "reserved",
     "image": "images/small monstera.jpg"
   },
   {
