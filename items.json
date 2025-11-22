@@ -108,7 +108,7 @@
     "description": "weakest/cheapest model from the time, needs a factory reset I reckon",
     "room": "Office",
     "category": "Electronics",
-    "status": "available",
+    "status": "reserved",
     "image": "images/macbook.jpg"
   },
   {
