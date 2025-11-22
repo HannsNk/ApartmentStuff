@@ -244,7 +244,7 @@
     "description": "Small and large foam roller things.",
     "room": "Misc",
     "category": "Fitness",
-    "status": "available",
+    "status": "reserved",
     "image": "images/foam rollers.jpg"
   },
   {
@@ -268,7 +268,7 @@
     "description": "not loving life currently, but with some care could thrive again",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "reserved",
     "image": "images/peace lily.jpg"
   },
   {
@@ -284,7 +284,7 @@
     "description": "cute little pot, not sure what this is supposed to look like tbh",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "reserved",
     "image": "images/small plant.jpg"
   },
   {
@@ -292,7 +292,7 @@
     "description": "in a glass pot, roots exposed",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "reserved",
     "image": "images/umbrella tree.jpg"
   },
   {
