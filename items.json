@@ -148,7 +148,7 @@
     "description": "",
     "room": "Misc",
     "category": "Decor",
-    "status": "reserved",
+    "status": "taken",
     "image": "images/brown glass vase.jpg"
   },
   {
@@ -284,7 +284,7 @@
     "description": "cute little pot, not sure what this is supposed to look like tbh",
     "room": "Plants",
     "category": "Plants",
-    "status": "reserved",
+    "status": "taken",
     "image": "images/small plant.jpg"
   },
   {
@@ -292,7 +292,7 @@
     "description": "in a glass pot, roots exposed",
     "room": "Plants",
     "category": "Plants",
-    "status": "reserved",
+    "status": "taken",
     "image": "images/umbrella tree.jpg"
   },
   {
@@ -308,7 +308,7 @@
     "description": "what can I say, it's a devil's ivy and it's sexy af",
     "room": "Plants",
     "category": "Plants",
-    "status": "reserved",
+    "status": "taken",
     "image": "images/devils ivy.jpg"
   },
   {
@@ -332,7 +332,7 @@
     "description": "my OG monstera, could do with another pot and nice soil",
     "room": "Plants",
     "category": "Plants",
-    "status": "reserved",
+    "status": "taken",
     "image": "images/small monstera.jpg"
   },
   {
