@@ -484,7 +484,7 @@
     "description": "",
     "room": "Living Room",
     "category": "Misc",
-    "status": "new",
+    "status": "reserved",
     "image": "images/dilemmas game.jpg"
   },
   {
@@ -516,7 +516,7 @@
     "description": "Super nice large pot, not used much, one of my favorites",
     "room": "Kitchen",
     "category": "Kitchenware",
-    "status": "new",
+    "status": "reserved",
     "image": "images/pot.jpg"
   },
   {
@@ -548,7 +548,7 @@
     "description": "",
     "room": "Kitchen",
     "category": "Kitchenware",
-    "status": "new",
+    "status": "reserved",
     "image": "images/soda stream.jpg"
   },
   {
