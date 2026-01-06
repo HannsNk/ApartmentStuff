@@ -80,9 +80,8 @@ function render() {
     return matchesStatus && matchesSearch && matchesCategory;
   });
 
-  // We'll render in this order: new items (front), available items grouped by category, reserved items, taken items (end)
-  const newItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'new');
-  const availableItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'available');
+  // We'll render in this order: available items (including new) grouped by category, reserved items, taken items (end)
+  const availableItems = filtered.filter((i) => ['new', 'available'].includes(String(i.status || '').toLowerCase()));
   const reservedItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'reserved');
   const takenItems = filtered.filter((i) => String(i.status || '').toLowerCase() === 'taken');
 
@@ -142,8 +141,6 @@ function render() {
 
   // sort items within groups by title
   const sortByTitle = (a, b) => (a.title || '').localeCompare(b.title || '');
-  newItems.sort(sortByTitle);
-  availableItems.sort(sortByTitle);
   reservedItems.sort(sortByTitle);
   takenItems.sort(sortByTitle);
 
@@ -152,13 +149,6 @@ function render() {
     return;
   } else {
     emptyState.style.display = "none";
-  }
-
-  // Render new items first
-  for (const item of newItems) {
-    const card = createCard(item);
-    card.classList.add('new');
-    grid.appendChild(card);
   }
 
   // Group available items by category and render with headings
@@ -175,7 +165,13 @@ function render() {
       heading.className = 'category-heading';
       heading.textContent = cat;
       grid.appendChild(heading);
-      const list = map.get(cat).sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+      const list = map.get(cat).sort((a, b) => {
+        const aStatus = String(a.status || '').toLowerCase();
+        const bStatus = String(b.status || '').toLowerCase();
+        if (aStatus === 'new' && bStatus !== 'new') return -1;
+        if (bStatus === 'new' && aStatus !== 'new') return 1;
+        return (a.title || '').localeCompare(b.title || '');
+      });
       for (const it of list) {
         const card = createCard(it);
         grid.appendChild(card);

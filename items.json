@@ -4,7 +4,7 @@
     "description": "Lens: Canon EFS 18-135mm - Great camera, some 8 years old or so. Works perfectly, comes with 2 batteries, charger, strap, bag.",
     "room": "Office",
     "category": "Electronics",
-    "status": "available",
+    "status": "taken",
     "image": "images/camera.jpg"
   },
   {
@@ -28,7 +28,7 @@
     "description": "white ikea sideboard, with these soft box drawer thingies",
     "room": "Bedroom",
     "category": "Furniture",
-    "status": "available",
+    "status": "taken",
     "image": "images/side board with drawers.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "description": "or bedside lamp, black with adjustable arm",
     "room": "Office",
     "category": "Electronics",
-    "status": "available",
+    "status": "taken",
     "image": "images/lamp.jpg"
   },
   {
@@ -64,14 +64,6 @@
     "image": "images/bear toy.jpg"
   },
   {
-    "title": "Decorative Robot",
-    "description": "",
-    "room": "Misc",
-    "category": "Decor",
-    "status": "available",
-    "image": "images/robot.jpg"
-  },
-  {
     "title": "Electric Fan",
     "description": "simple cheap fan from amazon",
     "room": "Bedroom",
@@ -84,7 +76,7 @@
     "description": "a couple years old, works very well though",
     "room": "Office",
     "category": "Electronics",
-    "status": "available",
+    "status": "taken",
     "image": "images/samsung monitor.jpg"
   },
   {
@@ -100,7 +92,7 @@
     "description": "pretty new, supports two monitors in different orientations",
     "room": "Office",
     "category": "Electronics",
-    "status": "available",
+    "status": "taken",
     "image": "images/dual monitor arm.jpg"
   },
   {
@@ -132,7 +124,7 @@
     "description": "a couple more than in the image",
     "room": "Misc",
     "category": "Decor",
-    "status": "available",
+    "status": "taken",
     "image": "images/dried flowers.jpg"
   },
   {
@@ -172,7 +164,7 @@
     "description": "cheap bathroom smart scale with bluetooth",
     "room": "Bathroom",
     "category": "Electronics",
-    "status": "available",
+    "status": "taken",
     "image": "images/smart scale.jpg"
   },
   {
@@ -180,7 +172,7 @@
     "description": "4 boxes made of wicker / basket material with hinged lids",
     "room": "Bathroom",
     "category": "Storage",
-    "status": "available",
+    "status": "taken",
     "image": "images/baskets.jpg"
   },
   {
@@ -196,7 +188,7 @@
     "description": "55 inch model, works perfectly. With wall mount, two remotes, cables, stand. Awesome TV.",
     "room": "Living room",
     "category": "Electronics",
-    "status": "available",
+    "status": "taken",
     "image": "images/samsung tc.jpg"
   },
   {
@@ -276,7 +268,7 @@
     "description": "probably needs repotting",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "taken",
     "image": "images/banana.jpg"
   },
   {
@@ -316,7 +308,7 @@
     "description": "big and bulky, fat girl",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "taken",
     "image": "images/large monstera large pot.jpg"
   },
   {
@@ -340,7 +332,7 @@
     "description": "it's a palm",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "taken",
     "image": "images/parlour palm.jpg"
   },
   {
@@ -348,7 +340,7 @@
     "description": "it's another palm",
     "room": "Plants",
     "category": "Plants",
-    "status": "available",
+    "status": "taken",
     "image": "images/parlour palm 2.jpg"
   },
   {
@@ -366,13 +358,6 @@
     "category": "Outdoor",
     "status": "available",
     "image": "images/garden table.jpg"
-  },
-  {
-    "title": "2x garden / balcony chairs",
-    "description": "2 wooden foldable chairs",
-    "room": "Garden/balcony",
-    "category": "Outdoor",
-    "status": "available"
   },
   {
     "title": "Red Pan",
@@ -421,5 +406,173 @@
     "category": "Kitchenware",
     "status": "available",
     "image": "images/wine rack.jpg"
+  },
+  {
+    "title": "Alexa Smart Plugs",
+    "description": "different brands, all work with Alexa afaik, I have even more than in the picture",
+    "room": "Living Room",
+    "category": "Electronics",
+    "status": "new",
+    "image": "images/alexa plugs.jpg"
+  },
+  {
+    "title": "Whipped Cream Maker",
+    "description": "brand new, never used, fancy whipped cream maker",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/cream thing.jpg"
+  },
+  {
+    "title": "Tripod",
+    "description": "quite large, high quality tripod for cameras",
+    "room": "Office",
+    "category": "Electronics",
+    "status": "new",
+    "image": "images/tripod.jpg"
+  },
+  {
+    "title": "TOM10 USB Audio Interface",
+    "description": "",
+    "room": "Office",
+    "category": "Electronics",
+    "status": "new",
+    "image": "images/interface.jpg"
+  },
+  {
+    "title": "Tepanyaki Table Grill",
+    "description": "with those wooden thingies to push food around",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/tepanyaki.jpg"
+  },
+  {
+    "title": "Blue Steam Iron",
+    "description": "",
+    "room": "Bedroom",
+    "category": "Electronics",
+    "status": "new",
+    "image": "images/steam iron 2.jpg"
+  },
+  {
+    "title": "Dart Board with Darts",
+    "description": "bot worn from the weather",
+    "room": "Living Room",
+    "category": "Misc",
+    "status": "new",
+    "image": "images/dart board (with darts).jpg"
+  },
+  {
+    "title": "Push Game",
+    "description": "never played",
+    "room": "Living Room",
+    "category": "Misc",
+    "status": "new",
+    "image": "images/push game.jpg"
+  },
+  {
+    "title": "Hong Kong Memory Game",
+    "description": "",
+    "room": "Living Room",
+    "category": "Misc",
+    "status": "new",
+    "image": "images/hong kong memory game.jpg"
+  },
+  {
+    "title": "Various Card Games",
+    "description": "various card games, some are newish, some are old",
+    "room": "Living Room",
+    "category": "Misc",
+    "status": "new",
+    "image": "images/various card games.jpg"
+  },
+  {
+    "title": "Dilemmas Game",
+    "description": "",
+    "room": "Living Room",
+    "category": "Misc",
+    "status": "new",
+    "image": "images/dilemmas game.jpg"
+  },
+  {
+    "title": "White Steam Iron",
+    "description": "",
+    "room": "Bedroom",
+    "category": "Electronics",
+    "status": "new",
+    "image": "images/steam iron 1.jpg"
+  },
+  {
+    "title": "4 Straw Placemats",
+    "description": "",
+    "room": "Dining Room",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/table sets.jpg"
+  },
+  {
+    "title": "Sandwich Toaster",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/sandwich toaster.jpg"
+  },
+  {
+    "title": "Large Pot",
+    "description": "Super nice large pot, not used much, one of my favorites",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/pot.jpg"
+  },
+  {
+    "title": "Mexican Game/Toy (Balero)",
+    "description": "",
+    "room": "Living Room",
+    "category": "Misc",
+    "status": "new",
+    "image": "images/mexican game.jpg"
+  },
+  {
+    "title": "KitchenAid Blender",
+    "description": "food processor/blender, great quality. Not amazing for smoothies and stuff but great for other things.",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/blender.jpg"
+  },
+  {
+    "title": "Tennis Racket with Balls and Bag",
+    "description": "",
+    "room": "Misc",
+    "category": "Fitness",
+    "status": "new",
+    "image": "images/tennis racket.jpg"
+  },
+  {
+    "title": "Soda Stream with Extra Gas Bottle and Water Bottles",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/soda stream.jpg"
+  },
+  {
+    "title": "Glass Water Jar",
+    "description": "",
+    "room": "Kitchen",
+    "category": "Kitchenware",
+    "status": "new",
+    "image": "images/glass jar.jpg"
+  },
+  {
+    "title": "Neck Travel Cushion",
+    "description": "",
+    "room": "Misc",
+    "category": "Misc",
+    "status": "new",
+    "image": "images/neck cushion.jpg"
   }
 ]
