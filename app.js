@@ -1,6 +1,37 @@
 // Items are now stored in `items.json` so you can edit that file from your phone.
 // image: put files in an "images" folder and reference like "images/chair.jpg"
 let items = [];
+let books = [];
+
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  const headers = lines[0].split(',').map(h => h.trim());
+  const rows = lines.slice(1).map(line => {
+    const fields = [];
+    let current = '';
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      if (char === '"' && !inQuotes) {
+        inQuotes = true;
+      } else if (char === '"' && inQuotes) {
+        inQuotes = false;
+      } else if (char === ',' && !inQuotes) {
+        fields.push(current);
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    fields.push(current);
+    return fields.map(f => f.trim().replace(/^"|"$/g, ''));
+  });
+  return rows.map(row => {
+    const obj = {};
+    headers.forEach((h, i) => obj[h] = row[i] || '');
+    return obj;
+  });
+}
 
 const grid = document.getElementById("grid");
 const searchInput = document.getElementById("search");
@@ -16,6 +47,13 @@ const modalTitle = document.getElementById('modal-title');
 const modalMeta = document.getElementById('modal-meta');
 const modalNotes = document.getElementById('modal-notes');
 const modalStatus = document.getElementById('modal-status');
+
+// Books elements
+const booksPreview = document.getElementById('books-preview');
+const booksModal = document.getElementById('books-modal');
+const booksModalOverlay = document.getElementById('books-modal-overlay');
+const booksModalClose = document.getElementById('books-modal-close');
+const booksGrid = document.getElementById('books-grid');
 
 let currentFilter = "all";
 let currentSearch = "";
@@ -233,11 +271,56 @@ function closeModal() {
   modalImage.src = '';
 }
 
+function openBooksModal() {
+  if (!booksModal) return;
+  booksGrid.innerHTML = '';
+  const map = new Map();
+  for (const book of books) {
+    const cat = book.Category || 'Uncategorized';
+    if (!map.has(cat)) map.set(cat, []);
+    map.get(cat).push(book);
+  }
+  const cats = Array.from(map.keys()).sort();
+  for (const cat of cats) {
+    const heading = document.createElement('div');
+    heading.className = 'category-heading';
+    heading.textContent = cat;
+    booksGrid.appendChild(heading);
+    const list = map.get(cat).sort((a, b) => (a.Title || '').localeCompare(b.Title || ''));
+    for (const book of list) {
+      const card = document.createElement('div');
+      card.className = 'book-card';
+      card.innerHTML = `
+        <h3>${book.Title}</h3>
+        <p><strong>Author:</strong> ${book.Author}</p>
+        <p><strong>Description:</strong> ${book.Description}</p>
+      `;
+      booksGrid.appendChild(card);
+    }
+  }
+  booksModal.style.display = 'flex';
+  booksModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeBooksModal() {
+  if (!booksModal) return;
+  booksModal.style.display = 'none';
+  booksModal.setAttribute('aria-hidden', 'true');
+}
+
 // modal close handlers
 if (modalClose) modalClose.addEventListener('click', closeModal);
 if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
+});
+
+// books modal handlers
+if (booksPreview) booksPreview.addEventListener('click', openBooksModal);
+if (booksModalClose) booksModalClose.addEventListener('click', closeBooksModal);
+if (booksModalOverlay) booksModalOverlay.addEventListener('click', closeBooksModal);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && booksModal && booksModal.style.display === 'flex') closeBooksModal();
 });
 
 // Search + filter handlers
@@ -263,7 +346,7 @@ if (categorySelect) {
   });
 }
 
-// Load items from items.json, then render.
+// Load items from items.json and books from books.csv, then render.
 fetch('items.json')
   .then((res) => {
     if (!res.ok) throw new Error('Failed to load items.json');
@@ -271,6 +354,14 @@ fetch('items.json')
   })
   .then((data) => {
     if (Array.isArray(data)) items = data;
+    return fetch('books.csv');
+  })
+  .then((res) => {
+    if (!res.ok) throw new Error('Failed to load books.csv');
+    return res.text();
+  })
+  .then((text) => {
+    books = parseCSV(text);
     // populate categories
     populateCategories();
     render();

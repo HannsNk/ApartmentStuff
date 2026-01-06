@@ -31,6 +31,10 @@
   </header>
 
   <main>
+    <div id="books-preview" class="books-preview">
+      <h2>📚 Books Collection <span class="status-badge new">New</span></h2>
+      <p>Click here to browse my books</p>
+    </div>
     <div id="grid" class="grid"></div>
     <div id="empty" class="empty-state" style="display:none;">
       Nothing matches your search or filter. Try clearing the search box.
@@ -52,6 +56,18 @@
           <div id="modal-notes" class="card-notes"></div>
           <div id="modal-status" class="status-badge"></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Books Modal -->
+  <div id="books-modal" class="modal" aria-hidden="true" style="display:none;">
+    <div class="modal-overlay" id="books-modal-overlay"></div>
+    <div class="modal-dialog books-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="books-modal-title">
+      <button id="books-modal-close" class="modal-close" aria-label="Close">×</button>
+      <div class="modal-content books-modal-content">
+        <h2 id="books-modal-title">Books</h2>
+        <div id="books-grid" class="books-grid"></div>
       </div>
     </div>
   </div>
