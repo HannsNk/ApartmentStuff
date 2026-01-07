@@ -340,7 +340,7 @@
     "description": "Cosmogrill, some rust here and there, obviously used. from amazon: https://www.amazon.co.uk/dp/B0749Q79YL?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_3&th=1",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "available",
+    "status": "reserved",
     "image": "images/grill.png"
   },
   {
@@ -348,7 +348,7 @@
     "description": "wood, foldable garden table",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "available",
+    "status": "reserved",
     "image": "images/garden table.jpg"
   },
   {
@@ -532,7 +532,7 @@
     "description": "food processor/blender, great quality. Not amazing for smoothies and stuff but great for other things.",
     "room": "Kitchen",
     "category": "Kitchenware",
-    "status": "new",
+    "status": "reserved",
     "image": "images/blender.jpg"
   },
   {
