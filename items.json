@@ -132,7 +132,7 @@
     "description": "the painting is mine :)",
     "room": "Misc",
     "category": "Decor",
-    "status": "available",
+    "status": "reserved",
     "image": "images/picture frame.jpg"
   },
   {
@@ -468,7 +468,7 @@
     "description": "",
     "room": "Living Room",
     "category": "Misc",
-    "status": "new",
+    "status": "reserved",
     "image": "images/hong kong memory game.jpg"
   },
   {
@@ -500,7 +500,7 @@
     "description": "",
     "room": "Dining Room",
     "category": "Kitchenware",
-    "status": "new",
+    "status": "reserved",
     "image": "images/table sets.jpg"
   },
   {
