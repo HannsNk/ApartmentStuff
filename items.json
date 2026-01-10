@@ -404,7 +404,7 @@
     "description": "different brands, all work with Alexa afaik, I have even more than in the picture",
     "room": "Living Room",
     "category": "Electronics",
-    "status": "new",
+    "status": "taken",
     "image": "images/alexa plugs.jpg"
   },
   {
@@ -428,7 +428,7 @@
     "description": "",
     "room": "Office",
     "category": "Electronics",
-    "status": "new",
+    "status": "reserved",
     "image": "images/interface.jpg"
   },
   {
