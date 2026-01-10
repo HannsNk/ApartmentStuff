@@ -460,7 +460,7 @@
     "description": "never played",
     "room": "Living Room",
     "category": "Misc",
-    "status": "new",
+    "status": "reserved",
     "image": "images/push game.jpg"
   },
   {
@@ -524,7 +524,7 @@
     "description": "",
     "room": "Living Room",
     "category": "Misc",
-    "status": "new",
+    "status": "reserved",
     "image": "images/mexican game.jpg"
   },
   {
