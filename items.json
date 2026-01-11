@@ -148,7 +148,7 @@
     "description": "",
     "room": "Living room",
     "category": "Furniture",
-    "status": "available",
+    "status": "reserved",
     "image": "images/large ikea drawers.jpg"
   },
   {
@@ -508,7 +508,7 @@
     "description": "",
     "room": "Kitchen",
     "category": "Kitchenware",
-    "status": "new",
+    "status": "reserved",
     "image": "images/sandwich toaster.jpg"
   },
   {
