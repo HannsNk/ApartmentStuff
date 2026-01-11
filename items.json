@@ -340,7 +340,7 @@
     "description": "Cosmogrill, some rust here and there, obviously used. from amazon: https://www.amazon.co.uk/dp/B0749Q79YL?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_3&th=1",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "reserved",
+    "status": "taken",
     "image": "images/grill.png"
   },
   {
@@ -348,7 +348,7 @@
     "description": "wood, foldable garden table",
     "room": "Garden/balcony",
     "category": "Outdoor",
-    "status": "reserved",
+    "status": "taken",
     "image": "images/garden table.jpg"
   },
   {
